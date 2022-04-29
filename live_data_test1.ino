@@ -21,6 +21,19 @@ String random_fun() {
   return String(t);
 }
 
+String random_fun1() {
+
+  float t = random(5,70);
+  Serial.println(t);
+  return String(t);
+}
+
+String random_fun2() {
+
+  float t = random(25,80);
+  Serial.println(t);
+  return String(t);
+}
 
 
 
@@ -53,6 +66,12 @@ String random_fun() {
   });
   server.on("/temperature", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send_P(200, "text/plain", random_fun().c_str());
+  });
+  server.on("/pressure", HTTP_GET, [](AsyncWebServerRequest *request){
+    request->send_P(200, "text/plain", random_fun1().c_str());
+  });
+  server.on("/humidity", HTTP_GET, [](AsyncWebServerRequest *request){
+    request->send_P(200, "text/plain", random_fun2().c_str());
   });
 
   // Start server
