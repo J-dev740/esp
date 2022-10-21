@@ -3,22 +3,73 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(231, 216, 228);
-}
-/* -------------- room.ejs -------------- */
 
+    background-color: rgb(231, 216, 228);
+    /* background-image:url("./img4.jpg"); */
+
+}   
+/* -------------- room.ejs -------------- */
+    /* body {
+
+    } */
 h1 {
+    font-family: cursive;
     text-align: center;
     margin-top: 15px;
+    border-style: dotted;
+    border-width: medium;
+    background-color: #b5af96;
+}
+.column {
+    float: left;
+    padding: 10px;
+    height: 500px; /* Should be removed. Only for demonstration */
+  }
+    .online{
+    position: relative;
+  width: 25%;
+  border-style: double;
+  border-width: thick;
+  overflow: auto;
 }
 
-input {
+    .window {
+  width: 75%;
+  border-width: 37px;
+  /* border-top: #513623; */
+  border-style: groove;
+}
+
+.chat-message {
+    padding: 0px;
+    border-color: aqua;
+    display: block;
+    overflow: auto;
+    margin: 10px;
+    height: 352px;
+    max-height: 419px;
+    max-width: 700px;
+    text-align: lef;
+    position: inherit;
+}
+
+#output #feedback {
+    margin-left: 10px;
+    /* display: block; */
+  }
+/* input {
     width: 100%;
     height: 40px;
     text-indent: 10px;
+} */
+input[type="text"] {
+    width: 69%;
+    padding: 5px;
+    margin: 5px;
+    position: inherit;
+    height: 37px;
 }
-
-button {
+/* button {
     width: 100%;
     height: 50px;
     background-color: #1a2eda;
@@ -28,13 +79,16 @@ button {
     outline: none;
     cursor: pointer;
     border: none;
-}
+} */
 
-.fields {
-    width: 100%;
-}
+.total:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
-.window {
+
+/* .window {
     margin: auto;
     margin-top: 20px;
     width: 700px;
@@ -63,20 +117,20 @@ button {
     left: 0px;
     top: 0px;
     background-color: rgb(110, 103, 103);
-}
+} */
 
-.online .users-online {
+/* .online .users-online {
     background-color: rgb(110, 103, 103);
     color: white;
     text-align: center;
     font-size: 40px;
     font-weight: bolder;
-}
+} */
 
-.users {
+/* .users {
     margin-left: 40px;
     margin-top: 50px;
-}
+} */
 
 .users p {
     background-color: rgb(110, 103, 103);
